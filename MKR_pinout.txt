@@ -1,0 +1,52 @@
+ | Pin number |  MKR  Board      |  PIN   | Notes           | Peri.A |     Peripheral B      | Perip.C | Perip.D | Peri.E | Peri.F | Periph.G | Periph.H |
+ | Arduino IDE|  Silkscreen      |  W25   |                 |   EIC  | ADC |  AC | PTC | DAC | SERCOMx | SERCOMx |  TCCx  |  TCCx  |    COM   | AC/GLCK  |
+ |            |                  |        |                 |(EXTINT)|(AIN)|(AIN)|     |     | (x/PAD) | (x/PAD) | (x/WO) | (x/WO) |          |          |
+ |------------|------------------|--------|-----------------|--------|-----|-----|-----|-----|---------|---------|--------|--------|----------|----------|
+ | 00         | D0               |  PA22  |   PIX_DTA(MOSI2)|  *06   |     |     | X10 |     | * 3/00  |   5/00  |* TC4/0 | TCC0/4 |          | GCLK_IO6 |
+ | 01         | D1               |  PA23  |   PIX_SCL(SCL2) |  *07   |     |     | X11 |     | * 3/01  |   5/01  |* TC4/1 | TCC0/5 | USB/SOF  | GCLK_IO7 |
+ | 02         | D2               |  PA10  |   USR_BUTTON    |   10   | *18 |     | X02 |     |   0/02  |   2/02  |*TCC1/0 | TCC0/2 | I2S/SCK0 | GCLK_IO4 |
+ | 03         | D3               |  PA11  |   RED_PWM       |   11   | *19 |     | X03 |     |   0/03  |   2/03  |*TCC1/1 | TCC0/3 | I2S/FS0  | GCLK_IO5 |
+ | 04         | D4               |  PB10  |   GRN_PWM       |  *10   |     |     |     |     |         |   4/02  |* TC5/0 | TCC0/4 | I2S/MCK1 | GCLK_IO4 |
+ | 05         | D5               |  PB11  |   BLU_PWM       |  *11   |     |     |     |     |         |   4/03  |* TC5/1 | TCC0/5 | I2S/SCK1 | GCLK_IO5 |
+ | 06         | D6/LED           |  PA20  |   SD_CS         |  *04   |     |     | X08 |     |   5/02  |   3/02  |        |*TCC0/6 | I2S/SCK0 | GCLK_IO4 |
+ | 07         | D7               |  PA21  |   PIX_DIN(MISO2)|  *05   |     |     | X09 |     |   5/03  |  *3/03  |        |*TCC0/7 | I2S/FS0  | GCLK_IO5 |
+ | 08         | MOSI             |  PA16  |   SD_MOSI       |  *00   |     |     | X04 |     |  *1/00  |   3/00  |*TCC2/0 | TCC0/6 |          | GCLK_IO2 |
+ | 09         | SCK              |  PA17  |   SD_SCK        |  *01   |     |     | X05 |     |  *1/01  |   3/01  | TCC2/1 | TCC0/7 |          | GCLK_IO3 |
+ | 10         | MISO             |  PA19  |   SD_MISO       |   03   |     |     | X07 |     |  *1/03  |   3/03  |* TC3/1 | TCC0/3 | I2S/SD0  | AC/CMP1  |
+ | 11         | SDA              |  PA08  |   SDA           |   NMI  | *16 |     | X00 |     |  *0/00  |   2/00  | TCC0/0 | TCC1/2 | I2S/SD1  |          |
+ | 12         | SCL              |  PA09  |   SCL           |   09   | *17 |     | X01 |     |  *0/01  |   2/01  | TCC0/1 | TCC1/3 | I2S/MCK0 |          |
+ | 13         | RX               |  PB23  |  *evkit button  |   07   |     |     |     |     |         |  *5/03  |        |        |          | GCLK_IO1 |
+ | 14         | TX               |  PB22  |                 |   06   |     |     |     |     |         |  *5/02  |        |        |          | GCLK_IO0 |
+ | 15         | A0 / DAC0        |  PA02  |  V_LED_MON      |   02   | *00 |     | Y00 | OUT |         |         |        |        |          |          |
+ | 16         | A1               |  PB02  |                 |  *02   | *10 |     | Y08 |     |         |   5/00  |        |        |          |          |
+ | 17         | A2               |  PB03  |   SD_DETECT     |  *03   | *11 |     | Y09 |     |         |   5/01  |        |        |          |          |
+ | 18         | A3               |  PA04  |  ONBOARD_LED_EN |   04   | *04 |  00 | Y02 |     |         |   0/00  |*TCC0/0 |        |          |          |
+ | 19         | A4               |  PA05  | PSU_MODE_SEL    |   05   | *05 |  01 | Y03 |     |         |   0/01  |*TCC0/1 |        |          |          |
+ | 20         | A5               |  PA06  | PSU_ENABLE      |   06   | *06 |  02 | Y04 |     |         |   0/02  | TCC1/0 |        |          |          |
+ | 21         | A6               |  PA07  | WIFI_CONF_USER  |   07   | *07 |  03 | Y05 |     |         |   0/03  | TCC1/1 |        | I2S/SD0  |          |
+ | 22         |                  |  PA24  | USB N           |   12   |     |     |     |     |   3/02  |   5/02  |  TC5/0 | TCC1/2 | USB/DM   |          |
+ | 23         |                  |  PA25  | USB P           |   13   |     |     |     |     |   3/03  |   5/03  |  TC5/1 | TCC1/3 | USB/DP   |          |
+ | 24         |                  |  PA18  | USB HOST EN     |   02   |     |     | X06 |     |   1/02  |   3/02  |  TC3/0 | TCC0/2 |          | AC/CMP0  |
+ | 25         | AREF             |  PA03  |                 |   03   |  01 |     | Y01 |     |         |         |        |        |          |          |
+ | 34         |                  |  PA00  | XIN32           |   00   |     |     |     |     |         |   1/00  | TCC2/0 |        |          |          |
+ | 35         |                  |  PA01  | XOUT32          |   01   |     |     |     |     |         |   1/01  | TCC2/1 |        |          |          |
+ | --         |                  |  PA31  |  SWDIO          |   11   |     |     |     |     |         |   1/03  | TCC1/1 |        |  SWDIO   |          |
+ | --         |                  |  PA30  |  SWCLK     		|   10   |     |     |     |     |         |   1/02  | TCC1/0 |        |  SWCLK   | GCLK_IO0 |
+
+
+on /fastpin_arm_d21.h : 
+
+#elif defined(ARDUINO_SAMD_MKR1000_LED) // MKR1000 based LED conrtoller
+
+#define MAX_PIN 21
+_DEFPIN_ARM(  0, 0, 23); _DEFPIN_ARM(  1, 0, 22); _DEFPIN_ARM(  2, 0, 16); _DEFPIN_ARM(  3, 0, 17);
+_DEFPIN_ARM(  4, 0, 18); _DEFPIN_ARM(  5, 0, 19); _DEFPIN_ARM(  6, 0, 24); _DEFPIN_ARM(  7, 0, 25);
+_DEFPIN_ARM(  8, 0, 27); _DEFPIN_ARM(  9, 0, 28); _DEFPIN_ARM( 10, 0, 30); _DEFPIN_ARM( 11, 0, 31);
+_DEFPIN_ARM( 12, 0, 15); _DEFPIN_ARM( 13, 0, 14); _DEFPIN_ARM( 14, 0,  2); _DEFPIN_ARM( 15, 0,  3);
+_DEFPIN_ARM( 16, 0,  4); _DEFPIN_ARM( 17, 0,  5); _DEFPIN_ARM( 18, 0,  6); _DEFPIN_ARM( 19, 0,  7);
+_DEFPIN_ARM( 20, 0,  8); _DEFPIN_ARM( 21, 0,  9); _DEFPIN_ARM( 22, 0, 10); _DEFPIN_ARM( 23, 0, 11);
+
+#define SPI_DATA 0
+#define SPI_CLOCK 1
+
+#define HAS_HARDWARE_PIN_SUPPORT 1
